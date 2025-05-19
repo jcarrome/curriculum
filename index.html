@@ -2,77 +2,263 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="CV, Curriculum, Nombre, Experiencia, Educación">
-    <meta name="description" content="Curriculum Vitae de [Tu Nombre]">
+    <meta name="keywords" content="CV, Curriculum, Juan Romero, Experiencia, Educación">
+    <meta name="description" content="Curriculum Vitae de Juan Romero">
     <meta name="author" content="Juan Romero">
     <title>CV de Juan Romero</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a192f;
+            color: #e6f1ff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #112240;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 80px auto 0; /* Margen superior aumentado a 80px */
+            border-radius: 8px;
+            max-width: 900px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: transparent;
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            padding: 8px 20px;
+            border-radius: 30px;
+            width: auto;
+            max-width: 90%;
+            transition: all 0.4s ease-out;
+            backdrop-filter: blur(0px);
+        }
+
+        nav.scrolled {
+            background-color: rgba(17, 34, 64, 0.9);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #e6f1ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 5px 12px;
+            border-radius: 15px;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            opacity: 0.8;
+        }
+
+        nav.scrolled a {
+            opacity: 1;
+        }
+
+        nav a:hover {
+            color: #64ffda;
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: #112240;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #64ffda;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #64ffda;
+        }
+
+        footer {
+            background-color: #112240;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                margin-top: 70px; /* Ajuste para móviles */
+                padding: 30px 15px;
+            }
+            
+            nav {
+                top: 10px;
+                padding: 6px 15px;
+            }
+            
+            nav ul {
+                gap: 8px;
+            }
+            
+            nav a {
+                padding: 4px 8px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                margin-top: 60px; /* Ajuste para pantallas pequeñas */
+                padding: 25px 10px;
+            }
+            
+            nav {
+                border-radius: 20px;
+                width: 95%;
+            }
+            
+            nav ul {
+                gap: 5px;
+            }
+            
+            nav a {
+                padding: 3px 6px;
+                font-size: 0.7rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Juan Romero</h1>
-        <p>Ingeniero en progreso | jcarrome@espol.edu.ec/p>
-    </header>
-    <nav>
+    <nav id="mainNav">
         <ul>
-            <li><a href="#perfil">Perfil Profesional</a></li>
-            <li><a href="#experiencia">Experiencia Laboral</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
             <li><a href="#educacion">Educación</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
         </ul>
     </nav>
+
+    <header>
+        <h1>Juan Romero</h1>
+        <p>Ingeniero en progreso | jcarrome@espol.edu.ec</p>
+    </header>
+
     <main>
+        <!-- Resto del contenido se mantiene igual -->
         <section id="perfil">
             <h2>Perfil Profesional</h2>
-            <p>Estudiante de quinto semestre ee la carrera de Ingeniería de computación en la Escuela Superior Politécnico.</p>
+            <p>Estudiante de quinto semestre de la carrera de Ingeniería en Computación en la Escuela Superior Politécnica del Litoral (ESPOL), con interés en el desarrollo de software, algoritmos y aplicaciones web. Responsable, colaborador y con experiencia como ayudante de cátedra en la universidad.</p>
         </section>
+
         <section id="experiencia">
             <h2>Experiencia Laboral</h2>
             <ul>
                 <li>
-                    <strong>Empresa ABC</strong> (2022 - Actualidad)<br>
-                    Desarrollador Frontend. Desarrollo de aplicaciones web responsivas.
-                </li>
-                <li>
-                    <strong>Empresa XYZ</strong> (2020 - 2022)<br>
-                    Soporte técnico y mantenimiento de sitios web.
+                    <strong>ESPOL - Escuela Superior Politécnica del Litoral</strong> (2025 - Actualidad)<br>
+                    Ayudante de Cátedra. Apoyo en clases, resolución de dudas, calificación de tareas y prácticas de laboratorio.
                 </li>
             </ul>
         </section>
+
         <section id="educacion">
             <h2>Educación</h2>
             <ul>
                 <li>
-                    <strong>Grado en Ingeniería Informática</strong> - Universidad Ejemplo (2016 - 2020)
+                    <strong>Ingeniería en Computación</strong> - ESPOL (2022 - Actualidad)
+                </li>
+                <li>
+                    <strong>Bachiller en Ciencias</strong> - Unidad Educativa Ecomundo Babahoyo (Graduado en 2022)
                 </li>
             </ul>
         </section>
+
         <section id="habilidades">
             <h2>Habilidades</h2>
             <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Vue.js</li>
+                <li>Java, Python, C</li>
+                <li>HTML, CSS, JavaScript (básico)</li>
                 <li>Git, GitHub</li>
-                <li>Trabajo en equipo</li>
+                <li>React (nivel principiante)</li>
+                <li>VS Code, NetBeans</li>
+                <li>Trabajo en equipo y comunicación efectiva</li>
             </ul>
         </section>
+
         <section id="proyectos">
             <h2>Proyectos</h2>
-            <ul>
-                <li>
-                    <strong>Portafolio Personal</strong> – Sitio web desarrollado con React para mostrar mis trabajos y habilidades.
-                </li>
-                <li>
-                    <strong>Gestor de Tareas</strong> – Aplicación web en Vue.js para la gestión de tareas y proyectos personales.
-                </li>
-                <li>
-                    <strong>Blog Técnico</strong> – Blog creado con HTML, CSS y JavaScript donde comparto artículos sobre desarrollo web.
-                </li>
-            </ul>
+            <p>📌 Próximamente...</p>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Juan Romero. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
