@@ -6,7 +6,7 @@
     <meta name="description" content="Curriculum Vitae de Juan Romero">
     <meta name="author" content="Juan Romero">
     <title>CV de Juan Romero</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
 </head>
 <body>
     <nav id="mainNav">
@@ -21,7 +21,7 @@
     </nav>
 
     <header>
-        <img src="multimedia/Multimedia.jpg" alt="Foto de Juan Romero" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:0;">
+        <img id="photo" src="multimedia/Multimedia.jpg" alt="Foto de Juan Romero" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:0;">
         <div>
             <h1 style="margin-bottom: 4px;">Juan Romero</h1>
             <p style="margin-top: 0;">Ingeniero en progreso | jcarrome@espol.edu.ec</p>
@@ -30,12 +30,12 @@
 
     <main>
         <section id="perfil">
-            <h2>Perfil Profesional</h2>
+            <h2 class="subtitle">Perfil Profesional</h2>
             <p>Estudiante de quinto semestre de la carrera de Ingeniería en Computación en la Escuela Superior Politécnica del Litoral (ESPOL), con interés en el desarrollo de software, algoritmos y aplicaciones web. Responsable, colaborador y con experiencia como ayudante de cátedra en la universidad.</p>
         </section>
 
         <section id="experiencia">
-            <h2>Experiencia Laboral</h2>
+            <h2 class="subtitle">Experiencia Laboral</h2>
             <ul>
                 <li>
                     <strong>ESPOL - Escuela Superior Politécnica del Litoral</strong> (2025 - Actualidad)<br>
@@ -45,7 +45,7 @@
         </section>
 
         <section id="educacion">
-            <h2>Educación</h2>
+            <h2 class="subtitle">Educación</h2>
             <ul>
                 <li>
                     <strong>Ingeniería en Computación</strong> - ESPOL (2022 - Actualidad)
@@ -78,7 +78,7 @@
         </section>
 
         <section id="habilidades">
-            <h2>Habilidades</h2>
+            <h2 class="subtitle">Habilidades</h2>
             <ul>
                 <li>Java, Python, C</li>
                 <li>HTML, CSS, JavaScript (básico)</li>
@@ -90,7 +90,7 @@
         </section>
 
         <section id="proyectos">
-            <h2>Proyectos</h2>
+            <h2 class="subtitle">Proyectos</h2>
             <!-- Lista ordenada de pasos para un proyecto -->
             <ol>
                 <li>📌 Próximamente...</li>
@@ -101,44 +101,44 @@
         </section>
 
         <section id="referencias">
-            <h2>Referencias</h2>
-            <article>
+            <h2 class="subtitle">Referencias</h2>
 
-            </article>
-            <article>
-                <blockquote>
-                    "Siempre dispuesto a colaborar y aportar ideas innovadoras al equipo."
-                </blockquote>
-                <p>
-                    <strong>Omar Bohorquez</strong><br>
-                    Coordinador Académico, Unidad Educativa Ecomundo<br>
-                    Carlos fue supervisor de Juan en proyectos estudiantiles, resaltando su creatividad y dedicación.
-                </p>
-            </article>
-            <article>
-                <blockquote>
-                    "Su ética profesional y habilidades técnicas son ejemplares."
-                </blockquote>
-                <p>
-                    <strong>Ana Torres</strong><br>
-                    Líder de Desarrollo, Proyecto WebLab<br>
-                    Ana dirigió a Juan en un proyecto web, valorando su puntualidad y calidad en la entrega de resultados.
-                </p>
-            </article>
-            <article>
-                <blockquote>
-                    "Juan mostró gran interés y dedicación en el desarrollo de aplicaciones web y móviles, destacando por su rápida adaptación y aprendizaje."
-                </blockquote>
-                <p>
-                    <strong>Allan Avendaño</strong><br>
-                    Profesor de Desarrollo de Aplicaciones Web y Móviles, ESPOL<br>
-                    Allan fue docente de Juan, resaltando su participación activa y compromiso en las clases y proyectos prácticos.
-                </p>
-            </article>
+                <article>
+                    <blockquote>
+                        "Siempre dispuesto a colaborar y aportar ideas innovadoras al equipo."
+                        <p>
+                            <strong>Omar Bohorquez</strong><br>
+                            Coordinador Académico, Unidad Educativa Ecomundo<br>
+                            Carlos fue supervisor de Juan en proyectos estudiantiles, resaltando su creatividad y dedicación.
+                        </p>
+                    </blockquote>
+                </article>
+                <article>
+                    <blockquote>
+                        "Su ética profesional y habilidades técnicas son ejemplares."
+                        <p>
+                            <strong>Ana Torres</strong><br>
+                            Líder de Desarrollo, Proyecto WebLab<br>
+                            Ana dirigió a Juan en un proyecto web, valorando su puntualidad y calidad en la entrega de resultados.
+                        </p>
+                    </blockquote>
+                    
+                </article>
+                <article>
+                    <blockquote>
+                        "Juan mostró gran interés y dedicación en el desarrollo de aplicaciones web y móviles, destacando por su rápida adaptación y aprendizaje."
+                        <p>
+                            <strong>Allan Avendaño</strong><br>
+                            Profesor de Desarrollo de Aplicaciones Web y Móviles, ESPOL<br>
+                            Allan fue docente de Juan, resaltando su participación activa y compromiso en las clases y proyectos prácticos.
+                        </p>
+                    </blockquote>
+                    
+                </article>
         </section>
 
         <section id="contacto">
-            <h2>Contacto</h2>
+            <h2 class="subtitle">Contacto</h2>
             <form>
                 <label for="nombre">Nombre completo:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -164,12 +164,25 @@
                 </fieldset>
 
                 <label for="intereses">Áreas de interés:</label>
-                <select id="intereses" name="intereses[]" multiple required size="4">
-                    <option value="desarrollo">Desarrollo de software</option>
-                    <option value="web">Web</option>
-                    <option value="datos">Datos</option>
-                    <option value="soporte">Soporte</option>
-                </select>
+                <fieldset id="intereses" style="margin-top: 0;">
+                    <legend style="display:none;">Áreas de interés</legend>
+                    <label>
+                        <input type="checkbox" name="intereses[]" value="desarrollo" required>
+                        Desarrollo de software
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses[]" value="web">
+                        Web
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses[]" value="datos">
+                        Datos
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses[]" value="soporte">
+                        Soporte
+                    </label>
+                </fieldset>
 
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
@@ -191,7 +204,7 @@
         </section>
 
         <section id="video">
-            <h2>Video recomendado</h2>
+            <h2 class="subtitle">Video recomendado</h2>
             <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin-top:20px;">
                 <iframe 
                     src="https://www.youtube.com/embed/VQRLujxTm3c" 
